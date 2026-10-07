@@ -147,3 +147,7 @@ Permettre aux utilisateurs de :
 ### 3.2 Charte graphique
 
 ![Charte Graphique](./CharteGraphiquePronoXI.png)
+
+### 3.3 Maquette Figma
+
+https://www.figma.com/design/HhVCaN2woOV4iRZoUulYlY/Maquette?node-id=0-1&t=JEoqoVvqcRadtvsY-1
