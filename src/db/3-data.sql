@@ -1,6 +1,6 @@
 -------------- DONNEES DE REFERENCE --------------
 
-INSERT INTO statut_match (libelle) VALUES
+INSERT INTO statut_matchs (libelle) VALUES
     ('a venir'),
     ('en cours'),
     ('termine'),

@@ -1,6 +1,6 @@
 -- Active: 1791960355698@@127.0.0.1@3306@my_database
 -------------- TABLES DE REFERENCE --------------
-CREATE TABLE statut_match (
+CREATE TABLE statut_matchs (
     id SERIAL PRIMARY KEY,
     libelle VARCHAR(30) NOT NULL UNIQUE
 );
@@ -42,19 +42,19 @@ CREATE TABLE competition (
     CONSTRAINT ck_competition_dates CHECK (date_de_fin >= date_de_debut)
 );
 
-CREATE TABLE match (
+CREATE TABLE matchs (
     id SERIAL PRIMARY KEY,
     date DATE NOT NULL,
     heure_debut TIME NOT NULL,
     heure_fin TIME NOT NULL,
     score_domicile INTEGER,
     score_exterieur INTEGER,
-    id_statut_match INTEGER NOT NULL REFERENCES statut_match(id),
+    id_statut_matchs INTEGER NOT NULL REFERENCES statut_matchs(id),
     id_competition INTEGER NOT NULL REFERENCES competition(id),
     id_equipe_d INTEGER NOT NULL REFERENCES equipes(id),
     id_equipe_e INTEGER NOT NULL REFERENCES equipes(id),
-    CONSTRAINT ck_match_equipes CHECK (id_equipe_d <> id_equipe_e),
-    CONSTRAINT ck_match_scores CHECK (
+    CONSTRAINT ck_matchs_equipes CHECK (id_equipe_d <> id_equipe_e),
+    CONSTRAINT ck_matchs_scores CHECK (
         (score_domicile IS NULL OR score_domicile >= 0)
         AND (score_exterieur IS NULL OR score_exterieur >= 0)
     )
@@ -81,7 +81,7 @@ CREATE TABLE pronostic (
     points_a_gagner INTEGER NOT NULL DEFAULT 0,
     id_statut_pronostic INTEGER NOT NULL REFERENCES statut_pronostic(id),
     id_utilisateur INTEGER NOT NULL REFERENCES utilisateur(id),
-    id_match INTEGER NOT NULL REFERENCES match(id),
+    id_matchs INTEGER NOT NULL REFERENCES matchs(id),
     CONSTRAINT ck_pronostic_prediction CHECK (prediction IN ('1', 'N', '2')),
     CONSTRAINT ck_pronostic_scores CHECK (
         (score_prediction_domicile IS NULL OR score_prediction_domicile >= 0)
@@ -99,7 +99,7 @@ CREATE TABLE battle (
     heure_fin TIME NOT NULL,
     point_engages INTEGER NOT NULL CHECK (point_engages > 0),
     id_statut_battle INTEGER NOT NULL REFERENCES statut_battle(id),
-    id_match INTEGER NOT NULL REFERENCES match(id)
+    id_matchs INTEGER NOT NULL REFERENCES matchs(id)
 );
 
 -------------- TABLES DE LIAISON --------------
