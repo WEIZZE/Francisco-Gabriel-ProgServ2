@@ -23,4 +23,4 @@ INSERT INTO rang (nom, seuil_min, seuil_max) VALUES
     ('Argent',      100,    299),
     ('Or',          300,    599),
     ('Master',     600,    999),
-    ('Cahllenger',     1000,   999999);
+    ('Challenger',     1000,   999999);
