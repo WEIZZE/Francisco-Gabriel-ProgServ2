@@ -38,7 +38,8 @@ CREATE TABLE competition (
     date_de_debut DATE NOT NULL,
     date_de_fin DATE NOT NULL,
     CONSTRAINT uq_competition_nom_annee UNIQUE (nom, annee),
-    CONSTRAINT ck_competition_dates CHECK (date_de_fin >= date_de_debut)
+    CONSTRAINT ck_competition_dates CHECK (date_de_fin >= date_de_debut),
+    id_match INTEGER NOT NULL REFERENCES match(id)
 );
 
 CREATE TABLE match (
@@ -49,7 +50,7 @@ CREATE TABLE match (
     score_domicile INTEGER,
     score_exterieur INTEGER,
     id_statut_match INTEGER NOT NULL REFERENCES statut_match(id),
-    id_competition INTEGER NOT NULL REFERENCES competition(id),
+    id_pronostic INTEGER NOT NULL REFERENCES pronostic(id),
     id_equipe_d INTEGER NOT NULL REFERENCES equipes(id),
     id_equipe_e INTEGER NOT NULL REFERENCES equipes(id),
     CONSTRAINT ck_match_equipes CHECK (id_equipe_d <> id_equipe_e),
@@ -69,6 +70,7 @@ CREATE TABLE utilisateur (
     photo_de_profil VARCHAR(255),
     points INTEGER NOT NULL DEFAULT 0,
     id_rang INTEGER NOT NULL DEFAULT 1 REFERENCES rang(id),
+    id_pronostic INTEGER NOT NULL REFERENCES pronostic(id),
     id_equipe INTEGER REFERENCES equipes(id)
 );
 
@@ -79,8 +81,6 @@ CREATE TABLE pronostic (
     score_prediction_exterieur INTEGER,
     points_a_gagner INTEGER NOT NULL DEFAULT 0,
     id_statut_pronostic INTEGER NOT NULL REFERENCES statut_pronostic(id),
-    id_utilisateur INTEGER NOT NULL REFERENCES utilisateur(id),
-    id_match INTEGER NOT NULL REFERENCES match(id),
     CONSTRAINT ck_pronostic_prediction CHECK (prediction IN ('1', 'N', '2')),
     CONSTRAINT ck_pronostic_scores CHECK (
         (score_prediction_domicile IS NULL OR score_prediction_domicile >= 0)
