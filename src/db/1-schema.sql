@@ -1,4 +1,4 @@
--- Active: 1791960355698@@127.0.0.1@3306@my_database
+-- Active: 1791819504904@@127.0.0.1@3306@my_database
 -------------- TABLES DE REFERENCE --------------
 CREATE TABLE statut_match (
     id INT AUTO_INCREMENT PRIMARY KEY,

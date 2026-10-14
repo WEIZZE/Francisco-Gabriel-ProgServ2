@@ -6,12 +6,6 @@ INSERT INTO statut_match (libelle) VALUES
     ('reporte'),
     ('annule');
  
-INSERT INTO statut_battle (libelle) VALUES
-    ('ouverte'),
-    ('en cours'),
-    ('terminee'),
-    ('annulee');
- 
 INSERT INTO statut_pronostic (libelle) VALUES
     ('en attente'),
     ('gagne'),
