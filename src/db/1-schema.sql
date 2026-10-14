@@ -98,29 +98,5 @@ CREATE TABLE pronostic (
     ),
     CONSTRAINT uq_pronostic_utilisateur_match UNIQUE (id_utilisateur, id_match)
 );
- 
--------------- TABLES BATTLE --------------
- 
-CREATE TABLE battle (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    date DATE NOT NULL,
-    heure_debut TIME NOT NULL,
-    heure_fin TIME NOT NULL,
-    point_engages INT NOT NULL,
-    id_statut_battle INT NOT NULL,
-    id_match INT NOT NULL,
-    CONSTRAINT fk_battle_statut FOREIGN KEY (id_statut_battle) REFERENCES statut_battle(id),
-    CONSTRAINT fk_battle_match FOREIGN KEY (id_match) REFERENCES `match`(id),
-    CONSTRAINT ck_battle_points CHECK (point_engages > 0)
-);
- 
--------------- TABLES DE LIAISON --------------
- 
-CREATE TABLE battle_utilisateur (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_utilisateur INT NOT NULL,
-    id_battle INT NOT NULL,
-    CONSTRAINT fk_bu_utilisateur FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id),
-    CONSTRAINT fk_bu_battle FOREIGN KEY (id_battle) REFERENCES battle(id),
-    CONSTRAINT uq_battle_utilisateur UNIQUE (id_battle, id_utilisateur)
-);
+
+
