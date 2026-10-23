@@ -5,11 +5,6 @@ CREATE TABLE statut_match (
     libelle VARCHAR(30) NOT NULL UNIQUE
 );
  
-CREATE TABLE statut_battle (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    libelle VARCHAR(30) NOT NULL UNIQUE
-);
- 
 CREATE TABLE statut_pronostic (
     id INT AUTO_INCREMENT PRIMARY KEY,
     libelle VARCHAR(30) NOT NULL UNIQUE
