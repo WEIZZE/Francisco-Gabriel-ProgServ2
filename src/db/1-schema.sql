@@ -1,4 +1,4 @@
--- Active: 1791960355698@@127.0.0.1@3306@my_database
+-- Active: 1791819504904@@127.0.0.1@3306@my_database
 -------------- TABLES DE REFERENCE --------------
 CREATE TABLE statut_match (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,7 +37,7 @@ CREATE TABLE competition (
     CONSTRAINT ck_competition_dates CHECK (date_de_fin >= date_de_debut)
 );
 
-CREATE TABLE `match` (
+CREATE TABLE `matchs` (
     id INT AUTO_INCREMENT PRIMARY KEY,
     date DATE NOT NULL,
     heure_debut TIME NOT NULL,
@@ -80,12 +80,13 @@ CREATE TABLE pronostic (
     score_prediction_domicile INT,
     score_prediction_exterieur INT,
     points_a_gagner INT NOT NULL DEFAULT 0,
+    points_obtenus INT NOT NULL DEFAULT 0, 
     id_statut_pronostic INT NOT NULL,
     id_utilisateur INT NOT NULL,
     id_match INT NOT NULL,
     CONSTRAINT fk_pronostic_statut FOREIGN KEY (id_statut_pronostic) REFERENCES statut_pronostic(id),
     CONSTRAINT fk_pronostic_utilisateur FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id),
-    CONSTRAINT fk_pronostic_match FOREIGN KEY (id_match) REFERENCES `match`(id),
+    CONSTRAINT fk_pronostic_match FOREIGN KEY (id_match) REFERENCES `matchs`(id),
     CONSTRAINT ck_pronostic_prediction CHECK (prediction IN ('1', 'N', '2')),
     CONSTRAINT ck_pronostic_scores CHECK (
         (score_prediction_domicile IS NULL OR score_prediction_domicile >= 0)
@@ -93,5 +94,4 @@ CREATE TABLE pronostic (
     ),
     CONSTRAINT uq_pronostic_utilisateur_match UNIQUE (id_utilisateur, id_match)
 );
-
 
