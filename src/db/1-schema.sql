@@ -1,5 +1,7 @@
 -- Active: 1791819504904@@127.0.0.1@3306@my_database
 -------------- TABLES DE REFERENCE --------------
+USE my_database;
+
 CREATE TABLE statut_match (
     id INT AUTO_INCREMENT PRIMARY KEY,
     libelle VARCHAR(30) NOT NULL UNIQUE
