@@ -14,11 +14,13 @@
        line-height: 1.5;
        color: #172019;
        background-color: #f5f5f5;
+       position: relative;
    }
    
    .accueil img {
-       display: block;
+       display: flex;
        max-width: 100%;
+
    }
    
    .accueil a {
@@ -35,7 +37,7 @@
    .accueil h2 {
        font-size: 36px;
        line-height: 1.15;
-       color: #456b43;
+       color: #426B41;
    }
    
    .accueil h3 {
@@ -46,19 +48,26 @@
       EN-TÊTE ET NAVIGATION
       ========================= */
    
-   .accueil .header {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       flex-wrap: wrap;
-       gap: 20px;
-       padding: 20px 6%;
-       color: white;
-       background-color: #0b171c;
-   }
+      .accueil .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 6%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: transparent;
+        color: white;
+        border-bottom: 0.5px solid white;
+    }
    
-   .accueil .logo img {
-       width: 110px;
+   .accueil .logo {
+       width: 5%;
+
    }
    
    .accueil .header nav ul,
@@ -83,7 +92,7 @@
    
    .accueil .header > a:last-child {
        padding: 9px 22px;
-       background-color: #456b43;
+       background-color: #426B41;
        border-radius: 3px;
    }
    
@@ -100,6 +109,8 @@
        padding: 60px 6%;
        background-color: #0b171c;
        color: white;
+       min-height: 620px;
+    padding-top: 160px;
    }
    
    .accueil .hero-image {
@@ -159,10 +170,9 @@
    }
    
    .accueil .hero-actions a:last-child {
-       background-color: #456b43;
+       background-color: #426B41;
        color: white;
    }
-   
    
    /* =========================
       MATCH À LA UNE
@@ -230,7 +240,7 @@
        align-items: center;
        gap: 18px;
        margin: 0;
-       color: #456b43;
+       color: #426B41;
        font-size: 36px;
        font-weight: bold;
    }
@@ -254,7 +264,7 @@
    .accueil .match-issues li {
        padding: 8px 16px;
        background-color: #dedede;
-       color: #385b36;
+       color: #426B41;
        font-weight: bold;
    }
    
@@ -263,7 +273,7 @@
        margin-top: 10px;
        padding: 12px 24px;
        background-color: #dedede;
-       color: #385b36;
+       color: #426B41;
        font-size: 20px;
        font-weight: bold;
        text-decoration: none;
@@ -281,7 +291,7 @@
        justify-content: space-between;
        gap: 50px;
        padding: 60px 6%;
-       background-color: #42683f;
+       background-color: #426B41;
        color: white;
    }
    
@@ -369,7 +379,7 @@
    
    .accueil .fonctionnement-etapes li > p:first-child {
        margin-bottom: 40px;
-       color: #456b43;
+       color: #426B41;
        font-size: 42px;
        font-weight: bold;
    }
@@ -384,35 +394,7 @@
    .accueil .fonctionnement-etapes h3 {
        font-size: 20px;
    }
-   
-   
-   /* =========================
-      BATTLES
-      ========================= */
-   
-   .accueil .battles-section {
-       padding: 60px 6%;
-       background-color: #d9fc9e;
-       text-align: center;
-   }
-   
-   .accueil .battles-section h2 {
-       margin-bottom: 20px;
-       color: #172019;
-       font-size: 44px;
-   }
-   
-   .accueil .battles-section a {
-       display: inline-block;
-       margin-top: 15px;
-       padding: 12px 30px;
-       background-color: #456b43;
-       color: white;
-       border-radius: 3px;
-       text-decoration: none;
-   }
-   
-   
+      
    /* =========================
       PIED DE PAGE
       ========================= */

@@ -9,12 +9,12 @@
     <title>FOOTIX — Accueil</title>
 </head>
 
-<body class ="accueil">
+<body class="accueil">
 
     <!-- En-tête -->
     <header class="header">
         <a href="index.php" class="logo">
-            <img src="images/logo.svg" alt="FOOTIX">
+            <img src="../images/Logo_trophee.png" alt="FOOTIX">
         </a>
 
         <nav>
@@ -33,7 +33,7 @@
 
         <!-- Présentation -->
         <section class="hero">
-            <img src="../images/Accueil.webp" alt="" class="hero-image">
+            <img src="../images/Accueil_hero.jpg" alt="" class="hero-image">
 
             <div class="hero-contenu">
                 <p>Pronostique. Vibre. Domine.</p>
@@ -163,53 +163,28 @@
                 <li>
                     <p>1 N 2</p>
                     <h3>Choisis l’issue</h3>
-                    <p>
-                        Victoire à domicile, match nul
-                        ou victoire à l’extérieur.
-                    </p>
+                    <p>Victoire à domicile, match nul ou victoire à l’extérieur.</p>
                 </li>
 
                 <li>
                     <p>3 - 1</p>
                     <h3>Vise le score</h3>
-                    <p>
-                        Affûte ton pronostic avec un score exact
-                        pour remporter un maximum de points.
-                    </p>
+                    <p>Affûte ton pronostic avec un score exact pour remporter un maximum de points.</p>
                 </li>
 
                 <li>
-                    <img src="images/trophee.svg" alt="">
+                    <img src="../images/Winner.png" id="Winner">
                     <h3>Grimpe au sommet</h3>
-                    <p>
-                        Accumule des points, débloque des titres
-                        et défie tes amis en battle.
-                    </p>
+                    <p>Accumule des points et débloque des titres.</p>
                 </li>
             </ol>
         </section>
-
-        <!-- Battles -->
-        <section class="battles-section">
-            <h2 id="titre-battles">
-                Ton groupe.<br>
-                Vos règles.
-            </h2>
-
-            <p>
-                Crée une battle, invite tes amis
-                et règle la question une bonne fois pour toutes.
-            </p>
-
-            <a href="battles.php">Lancer une battle →</a>
-        </section>
-
     </main>
 
     <!-- Pied de page -->
     <footer class="footer">
         <a href="index.php">
-            <img src="images/logo.svg" alt="FOOTIX">
+            <img src="../images/Logo_trophee.png" class="logo">
         </a>
 
         <nav>
