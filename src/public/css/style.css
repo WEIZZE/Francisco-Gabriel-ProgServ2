@@ -1,0 +1,521 @@
+/* =========================
+   BASE DE LA PAGE
+   ========================= */
+
+   .accueil,
+   .accueil * {
+       box-sizing: border-box;
+   }
+   
+   .accueil {
+       margin: 0;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 16px;
+       line-height: 1.5;
+       color: #172019;
+       background-color: #f5f5f5;
+   }
+   
+   .accueil img {
+       display: block;
+       max-width: 100%;
+   }
+   
+   .accueil a {
+       color: inherit;
+   }
+   
+   .accueil h1,
+   .accueil h2,
+   .accueil h3,
+   .accueil p {
+       margin-top: 0;
+   }
+   
+   .accueil h2 {
+       font-size: 36px;
+       line-height: 1.15;
+       color: #456b43;
+   }
+   
+   .accueil h3 {
+       font-size: 22px;
+   }
+   
+   /* =========================
+      EN-TÊTE ET NAVIGATION
+      ========================= */
+   
+   .accueil .header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-wrap: wrap;
+       gap: 20px;
+       padding: 20px 6%;
+       color: white;
+       background-color: #0b171c;
+   }
+   
+   .accueil .logo img {
+       width: 110px;
+   }
+   
+   .accueil .header nav ul,
+   .accueil .footer nav ul {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 24px;
+       margin: 0;
+       padding: 0;
+       list-style: none;
+   }
+   
+   .accueil .header a,
+   .accueil .footer a {
+       text-decoration: none;
+   }
+   
+   .accueil .header nav a:hover,
+   .accueil .footer nav a:hover {
+       text-decoration: underline;
+   }
+   
+   .accueil .header > a:last-child {
+       padding: 9px 22px;
+       background-color: #456b43;
+       border-radius: 3px;
+   }
+   
+   
+   /* =========================
+      IMAGE ET PRÉSENTATION
+      ========================= */
+   
+   .accueil .hero {
+       position: relative;
+       display: flex;
+       align-items: flex-end;
+       min-height: 540px;
+       padding: 60px 6%;
+       background-color: #0b171c;
+       color: white;
+   }
+   
+   .accueil .hero-image {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       filter: brightness(45%);
+   }
+   
+   .accueil .hero-contenu {
+       position: relative;
+       max-width: 850px;
+   }
+   
+   .accueil .hero-contenu > p:first-child {
+       margin-bottom: 80px;
+       color: #d9fc9e;
+       font-weight: bold;
+   }
+   
+   .accueil .hero h1 {
+       margin-bottom: 20px;
+       font-size: 52px;
+       line-height: 1.1;
+   }
+   
+   .accueil .hero h1 span {
+       color: #d9fc9e;
+   }
+   
+   .accueil .hero-contenu > p {
+       max-width: 480px;
+   }
+   
+   .accueil .hero-actions {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 16px;
+       margin-top: 24px;
+   }
+   
+   .accueil .hero-actions a {
+       display: inline-block;
+       padding: 12px 30px;
+       border-radius: 3px;
+       text-align: center;
+       text-decoration: none;
+       font-weight: bold;
+   }
+   
+   .accueil .hero-actions a:first-child {
+       background-color: #d9fc9e;
+       color: #172019;
+   }
+   
+   .accueil .hero-actions a:last-child {
+       background-color: #456b43;
+       color: white;
+   }
+   
+   
+   /* =========================
+      MATCH À LA UNE
+      ========================= */
+   
+   .accueil .match-section {
+       padding: 50px 6%;
+   }
+   
+   .accueil .match-section > header {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       gap: 30px;
+       margin-bottom: 35px;
+   }
+   
+   .accueil .match-section > header p {
+       max-width: 320px;
+       color: #456b43;
+   }
+   
+   .accueil .match {
+       max-width: 800px;
+       margin: 0 auto;
+       text-align: center;
+   }
+   
+   .accueil .match > header h3 {
+       font-size: 20px;
+   }
+   
+   .accueil .match > header p {
+       margin-bottom: 8px;
+       font-size: 22px;
+       font-weight: bold;
+   }
+   
+   .accueil .match-equipes {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 30px;
+       margin: 30px 0;
+   }
+   
+   .accueil .equipe {
+       width: 180px;
+   }
+   
+   .accueil .equipe img {
+       width: 120px;
+       height: 140px;
+       margin: 0 auto 12px;
+       object-fit: contain;
+   }
+   
+   .accueil .equipe p {
+       margin-bottom: 0;
+       font-weight: bold;
+   }
+   
+   .accueil .match-score {
+       display: flex;
+       align-items: center;
+       gap: 18px;
+       margin: 0;
+       color: #456b43;
+       font-size: 36px;
+       font-weight: bold;
+   }
+   
+   .accueil .match-score span:first-child,
+   .accueil .match-score span:last-child {
+       padding: 8px 16px;
+       background-color: #dedede;
+   }
+   
+   .accueil .match-issues {
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       gap: 16px;
+       margin: 25px 0;
+       padding: 0;
+       list-style: none;
+   }
+   
+   .accueil .match-issues li {
+       padding: 8px 16px;
+       background-color: #dedede;
+       color: #385b36;
+       font-weight: bold;
+   }
+   
+   .accueil .match > a {
+       display: inline-block;
+       margin-top: 10px;
+       padding: 12px 24px;
+       background-color: #dedede;
+       color: #385b36;
+       font-size: 20px;
+       font-weight: bold;
+       text-decoration: none;
+       text-transform: uppercase;
+   }
+   
+   
+   /* =========================
+      APERÇU DU CLASSEMENT
+      ========================= */
+   
+   .accueil .classement-section {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 50px;
+       padding: 60px 6%;
+       background-color: #42683f;
+       color: white;
+   }
+   
+   .accueil .classement-presentation {
+       flex: 1;
+   }
+   
+   .accueil .classement-presentation h2 {
+       max-width: 350px;
+       color: white;
+       font-size: 44px;
+   }
+   
+   .accueil .classement-presentation p {
+       max-width: 430px;
+   }
+   
+   .accueil .classement-presentation a {
+       display: inline-block;
+       margin-top: 10px;
+       padding: 12px 24px;
+       background-color: #d9fc9e;
+       color: #172019;
+       border-radius: 3px;
+       text-decoration: none;
+   }
+   
+   .accueil .classement-tableau {
+       width: 48%;
+       border-collapse: collapse;
+       background-color: #fafaf5;
+       color: #172019;
+   }
+   
+   .accueil .classement-tableau caption {
+       padding: 15px;
+       background-color: #fafaf5;
+       color: #172019;
+       text-align: left;
+       font-weight: bold;
+   }
+   
+   .accueil .classement-tableau th,
+   .accueil .classement-tableau td {
+       padding: 15px 12px;
+       border-bottom: 1px solid #dedede;
+       text-align: left;
+   }
+   
+   .accueil .classement-tableau tbody tr:last-child {
+       background-color: #d9fc9e;
+   }
+   
+   
+   /* =========================
+      FONCTIONNEMENT
+      ========================= */
+   
+   .accueil .fonctionnement {
+       padding: 80px 6%;
+   }
+   
+   .accueil .fonctionnement > h2 {
+       margin-bottom: 60px;
+       font-size: 44px;
+   }
+   
+   .accueil .fonctionnement-etapes {
+       display: flex;
+       margin: 0;
+       padding: 0;
+       border-top: 1px solid #aaaaaa;
+       border-bottom: 1px solid #aaaaaa;
+       list-style: none;
+   }
+   
+   .accueil .fonctionnement-etapes li {
+       flex: 1;
+       padding: 30px 24px;
+   }
+   
+   .accueil .fonctionnement-etapes li + li {
+       border-left: 1px solid #aaaaaa;
+   }
+   
+   .accueil .fonctionnement-etapes li > p:first-child {
+       margin-bottom: 40px;
+       color: #456b43;
+       font-size: 42px;
+       font-weight: bold;
+   }
+   
+   .accueil .fonctionnement-etapes img {
+       width: 55px;
+       height: 63px;
+       margin-bottom: 40px;
+       object-fit: contain;
+   }
+   
+   .accueil .fonctionnement-etapes h3 {
+       font-size: 20px;
+   }
+   
+   
+   /* =========================
+      BATTLES
+      ========================= */
+   
+   .accueil .battles-section {
+       padding: 60px 6%;
+       background-color: #d9fc9e;
+       text-align: center;
+   }
+   
+   .accueil .battles-section h2 {
+       margin-bottom: 20px;
+       color: #172019;
+       font-size: 44px;
+   }
+   
+   .accueil .battles-section a {
+       display: inline-block;
+       margin-top: 15px;
+       padding: 12px 30px;
+       background-color: #456b43;
+       color: white;
+       border-radius: 3px;
+       text-decoration: none;
+   }
+   
+   
+   /* =========================
+      PIED DE PAGE
+      ========================= */
+   
+   .accueil .footer {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-wrap: wrap;
+       gap: 25px;
+       margin-top: 40px;
+       padding: 25px 6%;
+       background-color: #080d09;
+       color: white;
+   }
+   
+   .accueil .footer img {
+       width: 100px;
+   }
+   
+   
+   /* =========================
+      ADAPTATION AUX PETITS ÉCRANS
+      ========================= */
+   
+   @media (max-width: 700px) {
+       .accueil .header {
+           justify-content: center;
+       }
+   
+       .accueil .header nav {
+           width: 100%;
+       }
+   
+       .accueil .header nav ul {
+           justify-content: center;
+           gap: 15px;
+       }
+   
+       .accueil .hero {
+           min-height: 440px;
+           padding: 40px 6%;
+       }
+   
+       .accueil .hero h1 {
+           font-size: 36px;
+       }
+   
+       .accueil .hero-contenu > p:first-child {
+           margin-bottom: 50px;
+       }
+   
+       .accueil .match-section > header,
+       .accueil .classement-section,
+       .accueil .fonctionnement-etapes {
+           flex-direction: column;
+       }
+   
+       .accueil .match-equipes {
+           gap: 12px;
+       }
+   
+       .accueil .equipe {
+           width: 100px;
+       }
+   
+       .accueil .equipe img {
+           width: 80px;
+           height: 100px;
+       }
+   
+       .accueil .match-score {
+           gap: 8px;
+           font-size: 24px;
+       }
+   
+       .accueil .match-score span:first-child,
+       .accueil .match-score span:last-child {
+           padding: 6px 10px;
+       }
+   
+       .accueil .classement-tableau {
+           width: 100%;
+       }
+   
+       .accueil .classement-tableau th,
+       .accueil .classement-tableau td {
+           padding: 12px 8px;
+       }
+   
+       .accueil .fonctionnement-etapes li + li {
+           border-left: 0;
+           border-top: 1px solid #aaaaaa;
+       }
+   
+       .accueil .footer {
+           justify-content: center;
+       }
+   
+       .accueil h2,
+       .accueil .classement-presentation h2,
+       .accueil .fonctionnement > h2,
+       .accueil .battles-section h2 {
+           font-size: 32px;
+       }
+   }
