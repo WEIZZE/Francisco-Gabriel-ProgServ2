@@ -1,0 +1,67 @@
+.reglement .hero-contenu {
+    max-width: 600px;
+}
+
+.reglement-contenu {
+    padding: 100px 7% 160px;
+}
+
+.reglement-etape + .reglement-etape {
+    margin-top: 100px;
+}
+
+.reglement-etape h2 {
+    margin-bottom: 40px;
+}
+
+.reglement-etape-inversee h2 {
+    text-align: right;
+}
+
+.reglement-etape-contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.reglement-exemple {
+    color: #426741;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.reglement-description {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.reglement-illustration {
+    width: 80px;
+    justify-self: center;
+}
+
+@media (max-width: 700px) {
+    .reglement-contenu {
+        padding: 60px 7% 80px;
+    }
+
+    .reglement-etape + .reglement-etape {
+        margin-top: 60px;
+    }
+
+    .reglement-etape-inversee h2 {
+        text-align: left;
+    }
+
+    .reglement-etape-contenu {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .reglement-description {
+        font-size: 20px;
+    }
+}

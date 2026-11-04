@@ -1,0 +1,283 @@
+/* Bandeau commun */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 650px;
+    padding: 180px 5% 80px;
+    background: #111;
+    color: white;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+}
+
+.hero-slogan {
+    position: absolute;
+    top: 110px;
+    left: 5%;
+    color: #d9fc9b;
+}
+
+.hero-slogan::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    margin-right: 16px;
+    vertical-align: middle;
+    background: currentColor;
+}
+
+.hero-contenu {
+    position: relative;
+}
+
+.hero-contenu > p {
+    max-width: 500px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Match à la une */
+
+.match-section {
+    padding: 50px 6%;
+    color: #426741;
+}
+
+.match-section > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.match-section > header p {
+    max-width: 400px;
+}
+
+.match {
+    text-align: center;
+}
+
+.match > header {
+    color: #111;
+}
+
+.match > header p {
+    margin-top: 12px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.match-equipes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 35px 0;
+}
+
+.equipe img {
+    width: 160px;
+    height: 180px;
+    margin: 0 auto 12px;
+    object-fit: contain;
+}
+
+.match-score {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.match-score span:first-child,
+.match-score span:last-child {
+    padding: 12px 24px;
+    background: #ddd;
+}
+
+.match-issues {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+    list-style: none;
+}
+
+.match-issues li,
+.match > a {
+    padding: 10px 20px;
+    background: #ddd;
+    font-weight: 700;
+}
+
+.match > a {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 24px;
+}
+
+/* Classement */
+
+.classement-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 6%;
+    background: #426741;
+    color: white;
+}
+
+.classement-presentation h2 {
+    max-width: 320px;
+    font-size: 56px;
+}
+
+.classement-presentation p {
+    margin: 30px 0 20px;
+}
+
+.classement-presentation a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #d9fc9b;
+    color: #111;
+}
+
+.classement-tableau {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f5f5f5;
+    color: #111;
+    box-shadow: 12px 12px #d9fc9b;
+    font-size: 14px;
+}
+
+.classement-tableau caption {
+    padding: 20px;
+    background: #f5f5f5;
+    text-align: left;
+}
+
+.classement-tableau th,
+.classement-tableau td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.classement-tableau tbody tr:last-child {
+    background: #d9fc9b;
+}
+
+/* Fonctionnement */
+
+.fonctionnement {
+    padding: 100px 0 80px;
+}
+
+.fonctionnement > h2 {
+    margin: 0 6% 80px;
+    color: #426741;
+}
+
+.fonctionnement-etapes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    list-style: none;
+}
+
+.fonctionnement-etapes li {
+    padding: 40px 30px;
+}
+
+.fonctionnement-etapes li + li {
+    border-left: 1px solid #aaa;
+}
+
+.fonctionnement-etapes li > p:first-child {
+    margin-bottom: 40px;
+    color: #426741;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.fonctionnement-etapes img {
+    width: 70px;
+    height: 67px;
+    margin-bottom: 40px;
+    object-fit: contain;
+}
+
+.fonctionnement-etapes h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Petits écrans */
+
+@media (max-width: 700px) {
+    .match-section > header {
+        display: block;
+    }
+
+    .match-section > header p {
+        margin-top: 20px;
+    }
+
+    .match-equipes {
+        gap: 16px;
+    }
+
+    .equipe img {
+        width: 80px;
+        height: 100px;
+    }
+
+    .match-score {
+        gap: 10px;
+        font-size: 28px;
+    }
+
+    .match-score span:first-child,
+    .match-score span:last-child {
+        padding: 8px;
+    }
+
+    .match-issues {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .classement-section,
+    .fonctionnement-etapes {
+        grid-template-columns: 1fr;
+    }
+
+    .classement-presentation h2 {
+        font-size: 40px;
+    }
+
+    .fonctionnement-etapes li + li {
+        border-left: 0;
+        border-top: 1px solid #aaa;
+    }
+}

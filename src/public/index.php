@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/accueil.css">
     <meta name="description" content="Fais tes pronostics de football et défie tes amis sur FOOTIX.">
     <title>FOOTIX — Accueil</title>
 </head>
@@ -32,24 +33,27 @@
     <main>
 
         <!-- Présentation -->
-        <section class="hero">
+        <section class="hero" aria-labelledby="titre-accueil">
+
             <img src="../images/Accueil_hero.jpg" alt="" class="hero-image">
 
-            <div class="hero-contenu">
-                <p>Pronostique. Vibre. Domine.</p>
+            <p class="hero-slogan">Pronostique. Vibre. Domine.</p>
 
+            <div class="hero-contenu">
                 <h1 id="titre-accueil">
                     Le foot se joue <span>avant le coup d’envoi</span>
                 </h1>
 
-                <p>
-                    Fais tes pronostics, gagne des points,
-                    et deviens une légende des championnats.
-                </p>
+                <div class="hero-presentation">
+                    <p>
+                        Fais tes pronostics, gagne des points,
+                        et deviens une légende des championnats.
+                    </p>
 
-                <div class="hero-actions">
-                    <a href="inscription.php">Inscription</a>
-                    <a href="connexion.php">Connexion</a>
+                    <div class="hero-actions">
+                        <a href="inscription.php">Inscription</a>
+                        <a href="connexion.php">Connexion</a>
+                    </div>
                 </div>
             </div>
         </section>
