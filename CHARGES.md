@@ -151,5 +151,3 @@ Permettre aux utilisateurs de :
 ### 3.3 Maquette Figma
 
 https://www.figma.com/design/HhVCaN2woOV4iRZoUulYlY/Maquette?node-id=0-1&t=JEoqoVvqcRadtvsY-1
-
-test modification
