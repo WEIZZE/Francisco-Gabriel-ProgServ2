@@ -3,17 +3,17 @@
 namespace FootX;
 
 class Rang {
-    public const RankBronze = 'Bronze';
-    public const RankSilver = 'Argent';
-    public const RankGold = 'Or';
-    public const RangMaster = 'Master';
-    public const RangChallenger = 'Challenger';
+    public const RANKBRONZE = 'Bronze';
+    public const RANKSILVER = 'Argent';
+    public const RANKGOLD = 'Or';
+    public const RANKMASTER = 'Master';
+    public const RANCHALLENGER = 'Challenger';
 
-    public const image_RankBronze = '/images/RankBronze.webp';
-    public const image_RankSilver = '/images/RankSilver.webp';
-    public const image_RankGold = '/images/RankGold.webp';
-    public const image_RangMaster = '/images/RankMaster.webp';
-    public const image_RangChallenger = '/images/RankChallenger.webp';
+    public const IMAGE_RANKBRONZE = '/images/RankBronze.webp';
+    public const IMAGE_RANKSILVER = '/images/RankSilver.webp';
+    public const IMAGE_RANKGOLD = '/images/RankGold.webp';
+    public const IMAGE_RANKMASTER = '/images/RankMaster.webp';
+    public const IMAGE_RANKCHALLENGER = '/images/RankChallenger.webp';
 
     public const SEUIL_MIN_BRONZE     = 0;
     public const SEUIL_MAX_BRONZE     = 99;

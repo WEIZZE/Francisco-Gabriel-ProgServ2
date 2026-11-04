@@ -5,7 +5,6 @@ namespace FootX;
 class Matchs {
     private int $id;
     private \DateTime $date;
-    private ?string $api;
     private \DateTime $heureDebut;
     private \DateTime $heureFin;
     private ?int $scoreDomicile;
@@ -15,10 +14,9 @@ class Matchs {
     private int $idEquipeD;
     private int $idEquipeE;
 
-    public function __construct(int $id, \DateTime $date, ?string $api, \DateTime $heureDebut, \DateTime $heureFin, ?int $scoreDomicile, ?int $scoreExterieur, int $idStatutMatch, int $idCompetition, int $idEquipeD, int $idEquipeE) {
+    public function __construct(int $id, \DateTime $date, \DateTime $heureDebut, \DateTime $heureFin, ?int $scoreDomicile, ?int $scoreExterieur, int $idStatutMatch, int $idCompetition, int $idEquipeD, int $idEquipeE) {
         $this->id = $id;
         $this->date = $date;
-        $this->api = $api;
         $this->heureDebut = $heureDebut;
         $this->heureFin = $heureFin;
         $this->scoreDomicile = $scoreDomicile;
@@ -35,10 +33,6 @@ class Matchs {
 
     public function getDate(): \DateTime {
         return $this->date;
-    }
-
-    public function getApi(): ?string {
-        return $this->api;
     }
 
     public function getHeureDebut(): \DateTime {
