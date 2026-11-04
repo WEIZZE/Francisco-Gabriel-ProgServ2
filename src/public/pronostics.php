@@ -53,8 +53,10 @@ $requete = $pdo->prepare(
         m.id_competition,
         m.date,
         m.heure_debut,
-        d.nom AS domicile,
-        e.nom AS exterieur
+        d.nom AS domicile, 
+        d.logo AS logo_domicile, 
+        e.nom AS exterieur, 
+        e.logo AS logo_exterieur
      FROM matchs AS m
      JOIN equipes AS d ON d.id = m.id_equipe_d
      JOIN equipes AS e ON e.id = m.id_equipe_e
