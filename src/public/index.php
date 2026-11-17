@@ -21,9 +21,8 @@
         <nav>
             <ul>
                 <li><a href="./pronostics.php">Pronostics</a></li>
-                <li><a href="./classements.php">Classements</a></li>
+                <li><a href="./classement.php">Classement</a></li>
                 <li><a href="./reglement.php">Règlement</a></li>
-                <li><a href="./battles.php">Battles</a></li>
             </ul>
         </nav>
 
@@ -33,15 +32,14 @@
     <main>
 
         <!-- Présentation -->
-        <section class="hero" aria-labelledby="titre-accueil">
-
+        <section class="hero">
             <img src="../images/Accueil_hero.jpg" alt="" class="hero-image">
 
             <p class="hero-slogan">Pronostique. Vibre. Domine.</p>
 
             <div class="hero-contenu">
                 <h1 id="titre-accueil">
-                    Le foot se joue <span>avant le coup d’envoi</span>
+                    Le foot se joue avant le coup d’envoi
                 </h1>
 
                 <div class="hero-presentation">

@@ -25,18 +25,9 @@
 
         <nav>
             <ul>
-                <li>
-                    <a href="./pronostics.php">Pronostics</a>
-                </li>
-                <li>
-                    <a href="./classements.php">Classements</a>
-                </li>
-                <li>
-                    <a href="./reglement.php">Règlement</a>
-                </li>
-                <li>
-                    <a href="./battles.php">Battles</a>
-                </li>
+                <li><a href="./index.php">Accueil</a></li>
+                <li><a href="./pronostics.php">Pronostics</a></li>
+                <li><a href="./classement.php">Classement</a></li>
             </ul>
         </nav>
 
@@ -47,12 +38,11 @@
 
         <!-- Présentation -->
         <section class="hero">
-            <img
-                src="../images/arbitre.webp" alt="" class="hero-image">
+            <img src="../images/arbitre.webp" alt="" class="hero-image">
+
+            <p class="hero-slogan">Pronostique. Vibre. Domine.</p>
 
             <div class="hero-contenu">
-                <p>Pronostique. Vibre. Domine.</p>
-
                 <h1 id="titre-reglement">Règlement</h1>
 
                 <p>

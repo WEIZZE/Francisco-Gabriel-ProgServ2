@@ -1,0 +1,150 @@
+/* Contenu de la page */
+
+.classements-contenu {
+	padding: 100px 5%;
+	color: #426741;
+}
+
+/* Filtres */
+
+.classements-filtres {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	margin-bottom: 60px;
+}
+
+.classements-filtres button {
+	padding: 14px 25px;
+	border: 0;
+	border-radius: 3px;
+	background: #d9fc9b;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+.classements-filtres .actif {
+	background: #426741;
+	color: white;
+}
+
+/* Tableau */
+
+.classements-tableau {
+	width: 100%;
+	border-collapse: collapse;
+	background: white;
+}
+
+.classements-tableau th,
+.classements-tableau td {
+	padding: 20px 30px;
+	text-align: left;
+}
+
+.classements-tableau th {
+	font-weight: 400;
+}
+
+.classements-tableau thead tr,
+.classements-tableau tbody tr:not(:last-child) {
+	border-bottom: 1px solid #aaa;
+}
+
+.classements-tableau th:nth-child(3),
+.classements-tableau th:nth-child(4),
+.classements-tableau td:nth-child(3),
+.classements-tableau td:nth-child(4) {
+	text-align: center;
+}
+
+.classements-tableau td img {
+	width: 90px;
+	margin: auto;
+}
+
+/* Profils des joueurs */
+
+.classements-profil {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.classements-profil .profil-avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #f00;
+	color: white;
+	font-size: 14px;
+}
+
+.classements-tableau tr:nth-child(2) .profil-avatar {
+	background: #a5b329;
+}
+
+.classements-tableau tr:nth-child(3) .profil-avatar {
+	background: #20c4b7;
+}
+
+.classements-tableau tr:nth-child(4) .profil-avatar {
+	background: #1900ff;
+}
+
+.classements-tableau tr:nth-child(5) .profil-avatar {
+	background: #ed00df;
+}
+
+.classements-tableau tr:nth-child(6) .profil-avatar {
+	background: #29df00;
+}
+
+.classements-tableau tr:nth-child(7) .profil-avatar {
+	background: #00bfe7;
+}
+
+.classements-tableau tr:nth-child(8) .profil-avatar {
+	background: #bc00ed;
+}
+
+.classements-tableau tr:nth-child(10) .profil-avatar {
+	background: #ffb500;
+}
+
+/* Petits écrans */
+
+@media (max-width: 700px) {
+	.classements-contenu {
+		padding: 60px 4%;
+		overflow-x: auto;
+	}
+
+	.classements-filtres {
+		gap: 12px;
+		margin-bottom: 35px;
+	}
+
+	.classements-filtres button {
+		padding: 10px 15px;
+	}
+
+	.classements-tableau th,
+	.classements-tableau td {
+		padding: 15px 10px;
+	}
+
+	.classements-profil {
+		gap: 10px;
+	}
+
+	.classements-tableau td img {
+		width: 65px;
+		max-width: none;
+	}
+}
