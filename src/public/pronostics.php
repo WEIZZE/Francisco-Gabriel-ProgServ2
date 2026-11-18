@@ -54,7 +54,9 @@ $requete = $pdo->prepare(
         m.date,
         m.heure_debut,
         d.nom AS domicile,
-        e.nom AS exterieur
+        d.logo AS logo_domicile,    
+        e.nom AS exterieur,
+        e.logo AS logo_exterieur
      FROM matchs AS m
      JOIN equipes AS d ON d.id = m.id_equipe_d
      JOIN equipes AS e ON e.id = m.id_equipe_e
@@ -135,8 +137,23 @@ foreach ($matchs as $match) {
 
                         <article>
                             <h3>
-                                <?= e($match['domicile']) ?>
-                                — <?= e($match['exterieur']) ?>
+                                <div class="equipe">
+                                    <img
+                                        src="<?= e($match['logo_domicile']) ?>"
+                                        alt=""
+                                        width="100"
+                                        height="100">
+                                    <?= e($match['domicile']) ?>
+                                </div>
+                                <div class="equipe">
+                                    <img
+                                        src="<?= e($match['logo_exterieur']) ?>"
+                                        alt=""
+                                        width="100"
+                                        height="100">
+                                    <?= e($match['exterieur']) ?>
+
+                                </div>
                             </h3>
 
                             <p>

@@ -11,4 +11,16 @@
     <a href="./pronostics.php">Pronostics</a>
 </body>
 
+<body>
+    <a href="./inscription.php">inscrpition</a>
+</body>
+
+<body>
+    <a href="./connexion.php">connexion</a>
+</body>
+
+<button>
+    <a href="./deconnexion.php">deconnexion</a>
+</button>
+
 </html>
