@@ -2,10 +2,10 @@
 
 session_start();
 
-require_once __DIR__ . '/../Database.php';
-require_once __DIR__ . '/../DatabaseInterface.php';
-require_once __DIR__ . '/../Utilisateur.php';
-require_once __DIR__ . '/../UtilisateurManager.php';
+require_once __DIR__ . '/../classes/DatabaseInterface.php';
+require_once __DIR__ . '/../classes/Database.php';
+require_once __DIR__ . '/../classes/Utilisateur/Utilisateur.php';
+require_once __DIR__ . '/../classes/Utilisateur/UtilisateurManager.php';
 
 use FootX\UtilisateurManager;
 

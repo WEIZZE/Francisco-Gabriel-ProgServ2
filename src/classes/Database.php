@@ -11,9 +11,9 @@ class Database implements DatabaseInterface {
     public function __construct() {
         try {
             $this->pdo = new PDO(
-                'mysql:host=localhost;dbname=my_database;charset=utf8mb4',
-                'root',
-                ''
+                'mysql:host=mariadb;dbname=my_database;charset=utf8mb4',
+                'username',
+                'password'
             );
 
             $this->pdo->setAttribute(
@@ -26,6 +26,7 @@ class Database implements DatabaseInterface {
                 PDO::FETCH_ASSOC
             );
         } catch (PDOException $e) {
+
             die('Erreur de connexion à la base de données : '
                 . $e->getMessage());
         }
