@@ -17,36 +17,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
     $motDePasse = $_POST['mot_de_passe'];
 
-    try {
+    $utilisateurManager = new UtilisateurManager();
 
-        $utilisateurManager = new UtilisateurManager();
+    $utilisateur = $utilisateurManager->getUtilisateurParEmail($email);
 
-        $utilisateur =
-            $utilisateurManager->getUtilisateurParEmail($email);
+    if (
+        $utilisateur && password_verify(
+            $motDePasse,
+            $utilisateur->getMotDePasse()
+        )
+    ) {
 
-        if (
-            $utilisateur === null ||
-            !password_verify(
-                $motDePasse,
-                $utilisateur->getMotDePasse()
-            )
-        ) {
-            throw new Exception(
-                'Email ou mot de passe incorrect.'
-            );
-        }
-
-        $_SESSION['id'] =
-            $utilisateur->getId();
-
-        $_SESSION['pseudo'] =
-            $utilisateur->getPseudo();
+        $_SESSION['user_id'] = $utilisateur->getId();
+        $_SESSION['username'] = $utilisateur->getPseudo();
 
         header('Location: index.php');
         exit();
-    } catch (Exception $e) {
+    } else {
 
-        $erreurs[] = $e->getMessage();
+        $erreurs[] =
+            "Email ou mot de passe incorrect.";
     }
 }
 ?>
@@ -69,18 +59,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <form method="POST">
 
-        <label>Adresse mail</label><br>
+        <label for="email">
+            Adresse mail
+        </label>
+        <br>
+
         <input
             type="email"
+            id="email"
             name="email"
             value="<?= htmlspecialchars($email) ?>"
             required>
 
         <br><br>
 
-        <label>Mot de passe</label><br>
+        <label for="mot_de_passe">
+            Mot de passe
+        </label>
+        <br>
+
         <input
             type="password"
+            id="mot_de_passe"
             name="mot_de_passe"
             required>
 

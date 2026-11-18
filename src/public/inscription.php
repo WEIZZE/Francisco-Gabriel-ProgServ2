@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $motDePasse
         );
 
-        $motDePasseHache = password_hash(
+        $hashedPassword = password_hash(
             $motDePasse,
             PASSWORD_DEFAULT
         );
@@ -39,10 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $utilisateurManager->addUtilisateur(
             $pseudo,
             $email,
-            $motDePasseHache
+            $hashedPassword
         );
 
-        $succes = "Inscription réussie.";
+        $succes =
+            "Inscription réussie.";
 
         $pseudo = '';
         $email = '';
@@ -75,36 +76,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <form method="POST">
 
-        <label>Pseudo</label><br>
+        <label for="pseudo">
+            Username
+        </label>
+        <br>
+
         <input
             type="text"
+            id="pseudo"
             name="pseudo"
             value="<?= htmlspecialchars($pseudo) ?>"
             required>
 
         <br><br>
 
-        <label>Mot de passe</label><br>
+        <label for="mot_de_passe">
+            Mot de passe
+        </label>
+        <br>
+
         <input
             type="password"
+            id="mot_de_passe"
             name="mot_de_passe"
             required>
 
         <br><br>
 
-        <label>Adresse mail</label><br>
+        <label for="email">
+            Adresse mail
+        </label>
+        <br>
+
         <input
             type="email"
+            id="email"
             name="email"
             value="<?= htmlspecialchars($email) ?>"
             required>
-
-        <br><br>
-
-        <label>Photo de profil</label><br>
-        <input
-            type="file"
-            name="photo">
 
         <br><br>
 
@@ -116,7 +125,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <p>
         Déjà inscrit ?
-        <a href="connexion.php">Connexion</a>
+        <a href="connexion.php">
+            Connexion
+        </a>
     </p>
 
 </body>
