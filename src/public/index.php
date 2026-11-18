@@ -191,25 +191,16 @@
 
         <nav>
             <ul>
-                <li><a href="reglement.php">Règlement</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="connexion.php">Connexion</a></li>
+                <li><a href="./reglement.php">Règlement</a></li>
+                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./connexion.php">Connexion</a></li>
+                <li><a href="./deconnexion.php">Deconnexion</a></li>
             </ul>
         </nav>
     </footer>
 
-</body>
 
-<body>
-    <a href="./inscription.php">inscrpition</a>
-</body>
 
-<body>
-    <a href="./connexion.php">connexion</a>
-</body>
 
-<button>
-    <a href="./deconnexion.php">deconnexion</a>
-</button>
 
 </html>
