@@ -200,7 +200,7 @@
                         </td>
                         <td>6'535</td>
                         <td>
-                            <img src="../images/RankIronwebp.webp" alt="Rang 4">
+                            <img src="../images/RankBronze.webp" alt="Rang 4">
                         </td>
                     </tr>
 
@@ -214,7 +214,7 @@
                         </td>
                         <td>6'323</td>
                         <td>
-                            <img src="../images/RankIronwebp.webp" alt="Rang 4">
+                            <img src="../images/RankBronze.webp" alt="Rang 4">
                         </td>
                     </tr>
                 </tbody>
