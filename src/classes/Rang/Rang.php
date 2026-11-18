@@ -7,7 +7,7 @@ class Rang {
     public const RANKSILVER = 'Argent';
     public const RANKGOLD = 'Or';
     public const RANKMASTER = 'Master';
-    public const RANCHALLENGER = 'Challenger';
+    public const RANKCHALLENGER = 'Challenger';
 
     public const IMAGE_RANKBRONZE = '/images/RankBronze.webp';
     public const IMAGE_RANKSILVER = '/images/RankSilver.webp';

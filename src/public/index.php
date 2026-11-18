@@ -95,7 +95,7 @@
                     <li>2 — Victoire du FC Barcelone</li>
                 </ul>
 
-                <a href="pronostics.php">Pronostique maintenant</a>
+                <a href="./pronostics.php">Pronostique maintenant</a>
             </article>
         </section>
 
@@ -110,7 +110,7 @@
                     les bons et les légendes.
                 </p>
 
-                <a href="classements.php">
+                <a href="classement.php">
                     Voir le classement complet →
                 </a>
             </div>
