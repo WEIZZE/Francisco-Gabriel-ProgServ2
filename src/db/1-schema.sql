@@ -1,4 +1,4 @@
--- Active: 1791819504904@@127.0.0.1@3306@my_database
+-- Active: 1791960355698@@127.0.0.1@3306@my_database
 -------------- TABLES DE REFERENCE --------------
 USE my_database;
 
@@ -15,6 +15,7 @@ CREATE TABLE statut_pronostic (
 CREATE TABLE rang (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL UNIQUE,
+    images VARCHAR(255) NOT NULL UNIQUE,
     seuil_min INT NOT NULL UNIQUE,
     seuil_max INT NOT NULL UNIQUE,
     CONSTRAINT ck_rang_seuils CHECK (seuil_min >= 0 AND seuil_max > seuil_min)

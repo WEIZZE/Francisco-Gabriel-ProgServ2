@@ -12,9 +12,9 @@ INSERT INTO statut_pronostic (libelle) VALUES
     ('perdu'),
     ('annule');
  
-INSERT INTO rang (nom, seuil_min, seuil_max) VALUES
-    ('Bronze',      0,      99),
-    ('Argent',      100,    299),
-    ('Or',          300,    599),
-    ('Master',     600,    999),
-    ('Challenger',     1000,   999999);
+INSERT INTO rang (nom, images, seuil_min, seuil_max) VALUES
+    ('Bronze', '/images/RankBronze.webp',     0,      99),
+    ('Argent', '/images/RankSilver.webp',      100,    299),
+    ('Or', '/images/RankGold.webp',          300,    599),
+    ('Master', '/images/RankMaster.webp',     600,    999),
+    ('Challenger', '/images/RankChallenger.webp',     1000,   999999);
